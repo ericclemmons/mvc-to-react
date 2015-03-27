@@ -1,3 +1,5 @@
 import React from "react";
 
-React.render(<h1>Howdy there!</h1>, document.getElementById("app"));
+import Home from "./components/Home";
+
+React.render(<Home />, document.getElementById("app"));

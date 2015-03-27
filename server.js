@@ -1,6 +1,8 @@
 import Hapi from "hapi";
 import React from "react";
 
+import Home from "./components/Home";
+
 const server = new Hapi.Server();
 
 server.connection({ port: 3000 });
@@ -17,7 +19,7 @@ server.route({
   method: "GET",
   path: "/{path*}",
   handler: function(request, reply) {
-    const view = React.renderToString(<h1>Howdy!</h1>);
+    const view = React.renderToString(<Home />);
 
     const layout = `
       <!DOCTYPE html>
