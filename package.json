@@ -3,8 +3,12 @@
   "name": "mvc-to-react",
   "main": "server.js",
   "dependencies": {
+    "babel": "^4.7.16",
     "hapi": "^8.4.0",
     "react": "^0.13.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node server.js"
+  }
 }
