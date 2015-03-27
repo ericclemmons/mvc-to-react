@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "mvc-to-react",
+  "main": "server.js",
+  "dependencies": {
+    "hapi": "^8.4.0",
+    "react": "^0.13.1"
+  },
+  "devDependencies": {}
+}
