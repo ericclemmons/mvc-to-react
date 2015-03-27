@@ -9,9 +9,21 @@ server.route({
   method: "GET",
   path: "/{path*}",
   handler: function(request, reply) {
-    const content = React.renderToString(<h1>Howdy!</h1>);
+    const view = React.renderToString(<h1>Howdy!</h1>);
 
-    reply(content);
+    const layout = `
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+        </head>
+        <body>
+          <div id="app">${view}</div>
+        </body>
+      </html>
+    `;
+
+    reply(layout);
   }
 });
 
