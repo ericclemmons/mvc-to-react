@@ -19,7 +19,7 @@ server.route({
   method: "GET",
   path: "/{path*}",
   handler: function(request, reply) {
-    const view = React.renderToString(<Home />);
+    const view = React.renderToString(<Home path={request.path} />);
 
     const layout = `
       <!DOCTYPE html>
