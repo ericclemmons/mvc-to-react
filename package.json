@@ -4,11 +4,14 @@
   "main": "server.js",
   "dependencies": {
     "babel": "^4.7.16",
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
     "hapi": "^8.4.0",
     "react": "^0.13.1"
   },
-  "devDependencies": {},
   "scripts": {
+    "browserify": "./node_modules/.bin/browserify client.js --debug --transform babelify > client.min.js",
+    "prestart": "npm run browserify",
     "start": "./node_modules/.bin/babel-node server.js"
   }
 }

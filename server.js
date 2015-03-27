@@ -7,6 +7,14 @@ server.connection({ port: 3000 });
 
 server.route({
   method: "GET",
+  path: "/client.min.js",
+  handler: function(request, reply) {
+    reply.file(`${__dirname}/client.min.js`);
+  }
+});
+
+server.route({
+  method: "GET",
   path: "/{path*}",
   handler: function(request, reply) {
     const view = React.renderToString(<h1>Howdy!</h1>);
@@ -19,6 +27,7 @@ server.route({
         </head>
         <body>
           <div id="app">${view}</div>
+          <script src="client.min.js" async defer></script>
         </body>
       </html>
     `;
