@@ -24,7 +24,11 @@ server.route({
       path: request.path
     };
 
-    const view = React.renderToString(<Context {...context} view={Home} />);
+    const view = React.renderToString((
+      <Context {...context}>
+        <Home />
+      </Context>
+    ));
 
     const layout = `
       <!DOCTYPE html>

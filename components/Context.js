@@ -1,5 +1,4 @@
-import React from "react";
-import { cloneWithProps } from "react/addons";
+import React from "react/addons";
 
 class Context extends React.Component {
   getChildContext() {
@@ -9,7 +8,11 @@ class Context extends React.Component {
   }
 
   render() {
-    return <this.props.view />
+    return (
+      <div>
+        {React.Children.map(this.props.children, React.addons.cloneWithProps)}
+      </div>
+    );
   }
 }
 

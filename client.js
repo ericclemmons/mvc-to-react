@@ -6,5 +6,7 @@ import Home from "./components/Home";
 const context = window.context;
 
 React.render((
-  <Context {...context} view={Home} />
+  <Context {...context}>
+    <Home />
+  </Context>
 ), document.getElementById("app"));
