@@ -1,5 +1,7 @@
 import React from "react";
 
+import Path from "./Path";
+
 class Home extends React.Component {
   constructor() {
     this.state = {
@@ -20,7 +22,7 @@ class Home extends React.Component {
 
     return (
       <h1 onMouseMove={this.changeColor.bind(this)} style={styles}>
-        Howdy from <code>{this.props.path}</code>!
+        Howdy from <Path />!
       </h1>
     );
   }
