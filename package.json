@@ -12,6 +12,11 @@
   "scripts": {
     "browserify": "browserify client.js --debug --transform babelify > client.min.js",
     "prestart": "npm run browserify",
-    "start": "babel-node server.js"
+    "start": "babel-node server.js",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "jsdom": "^3.1.2",
+    "mocha": "^2.2.1"
   }
 }
