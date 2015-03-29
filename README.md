@@ -1,7 +1,7 @@
 # Moving from MVC to React
 
-> Eric Clemmons' Space City JS 2015 "Moving from MVC to React"
-
+> [![](logo.png)](http://www.slideshare.net/ericclemmons/from-mvc-to-react)
+> – Eric Clemmons @ [Space City JS 2015](http://spacecityjs.com/)
 
 This project has [step-by-step commits][commits] introducing the following
 concepts in [React][react]:
